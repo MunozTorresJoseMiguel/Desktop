@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %}Vehículos Antiguos{% endblock %}
+{% block content %}
+<h2 class="mb-4">Historia de los Vehículos</h2>
+<p>Desde el siglo XIX, los vehículos han revolucionado el transporte. Aquí algunos modelos clásicos:</p>
+<div class="container mt-4">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+
+        <div class="col">
+            <div class="card h-100">
+                <img src="{{ url_for('static', filename='img/model_t.jpg.webp') }}" class="card-img-top" alt="Model T">
+                <div class="card-body">
+                    <h5 class="card-title">Ford Model T</h5>
+                    <p class="card-text">El primer coche producido en masa. Fabricado por Ford desde 1908.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100">
+                <img src="{{ url_for('static', filename='img/shelby.jpg.') }}" class="card-img-top" alt="Model T">
+                <div class="card-body">
+                    <h5 class="card-title">Ford mustang shelby </h5>
+                    <p class="card-text">Un hermoso auto año 1967.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col">
+            <div class="card h-100">
+                <img src="{{ url_for('static', filename='img/bocho.jpg.') }}" class="card-img-top" alt="Model T">
+                <div class="card-body">
+                    <h5 class="card-title">Volkswagen Tipo 1</h5>
+                    <p class="card-text">conocido mundialmente como el Escarabajo o el Beetle. Este auto clásico es
+                        reconocido por su diseño redondo, su motor trasero refrigerado por aire y su historia</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col">
+            <div class="card h-100">
+                <img src="{{ url_for('static', filename='img/Chevrolet.jpg.') }}" class="card-img-top" alt="Model T">
+                <div class="card-body">
+                    <h5 class="card-title">Chevrolet Bel Air de 1955</h5>
+                    <p class="card-text">El Chevrolet Bel Air de 1955 es un
+                        automóvil clásico estadounidense muy popular entre coleccionistas y entusiastas, especialmente
+                        la versión cupé de dos puertas sin parantes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100">
+            <video class="card-img-top" controls width="100%" style="height: auto;">
+                <source src="{{ url_for('static', filename='video/autos_antiguos.mp4') }}" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+
+            <div class="card-body">
+                <h5 class="card-title">Los autos más antiguos</h5>
+                <p class="card-text">Mira cómo funcionaba este clásico vehículo en sus tiempos.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+{% endblock %}

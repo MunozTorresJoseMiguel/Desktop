@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Maravillas del Mundo{% endblock %}
+{% block content %}
+<h2 class="mb-4">Las 7 Maravillas del Mundo</h2>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/muralla.jpg.webp') }}" class="card-img-top"
+                alt="Gran Muralla China">
+            <div class="card-body">
+                <h5 class="card-title">Gran Muralla China</h5>
+                <p class="card-text">Una de las estructuras más impresionantes del mundo.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Repite para las otras 6 maravillas -->
+</div>
+{% endblock %}
