@@ -3,17 +3,73 @@
 {% block content %}
 <h2 class="mb-4">Las 7 Maravillas del Mundo</h2>
 
-<div class="row row-cols-1 row-cols-md-2 g-4">
-    <div class="col">
-        <div class="card">
-            <img src="{{ url_for('static', filename='img/muralla.jpg.webp') }}" class="card-img-top"
-                alt="Gran Muralla China">
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <img src="{{ url_for('static', filename='img/muralla.jpg.webp') }}" class="card-img-top" alt="Pez León">
             <div class="card-body">
-                <h5 class="card-title">Gran Muralla China</h5>
-                <p class="card-text">Una de las estructuras más impresionantes del mundo.</p>
+                <h5 class="card-title">La Gran muralla china</h5>
+                <p class="card-text">La Gran Muralla china es una antigua fortificación china,[1]​ construida y reconstruida entre el siglo V a. C. y el siglo XVI para proteger la frontera norte del Imperio chino</p>
             </div>
         </div>
     </div>
-    <!-- Repite para las otras 6 maravillas -->
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <img src="{{ url_for('static', filename='img/petra.webp') }}" class="card-img-top" alt="Medusa">
+            <div class="card-body">
+                <h5 class="card-title">Petra</h5>
+                <p class="card-text">la "ciudad rosa", es un antiguo enclave arqueológico en Jordania,.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <img src="{{ url_for('static', filename='img/india.webp') }}" class="card-img-top" alt="Pez León">
+                <div class="card-body">
+                    <h5 class="card-title"> El taj mahal</h5>
+                    <p class="card-text"> </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <img src="{{ url_for('static', filename='img/mexico.webp') }}" class="card-img-top" alt="Medusa">
+                <div class="card-body">
+                    <h5 class="card-title">Chichén Itzá.</h5>
+                    <p class="card-text">.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <img src="{{ url_for('static', filename='img/peru.webp') }}" class="card-img-top" alt="Pez León">
+                    <div class="card-body">
+                        <h5 class="card-title">Machupi chu</h5>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <img src="{{ url_for('static', filename='img/roma.webp') }}" class="card-img-top" alt="Medusa">
+                    <div class="card-body">
+                        <h5 class="card-title">El coliseo romano </h5>
+                        <p class="card-text">Exotica ave por sus colores.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <img src="{{ url_for('static', filename='img/cristo.webp') }}" class="card-img-top" alt="Medusa">
+                    <div class="card-body">
+                        <h5 class="card-title">El cristo redendor</h5>
+                        <p class="card-text">Exotica ave por sus colores.</p>
+                    </div>
+                </div>
+            </div>
 </div>
 {% endblock %}

@@ -26,9 +26,61 @@
 </div>
 
 <h3>Terrestres</h3>
-<!-- Similar al anterior con dos cards -->
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <img src="{{ url_for('static', filename='img/oso.webp') }}" class="card-img-top" alt="Pez León">
+            <div class="card-body">
+                <h5 class="card-title">Oso Hormiguero</h5>
+                <p class="card-text">No solo los elefantes tienen trompa.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <img src="{{ url_for('static', filename='img/casuario.webp') }}" class="card-img-top" alt="Medusa">
+            <div class="card-body">
+                <h5 class="card-title">Casuiario</h5>
+                <p class="card-text">Hermosa ave tan parecida ala alvetruz.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <h3>Aéreos</h3>
-<!-- Similar al anterior con dos cards -->
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <img src="{{ url_for('static', filename='img/peregrino.webp') }}" class="card-img-top" alt="Pez León">
+            <div class="card-body">
+                <h5 class="card-title">Halcon Peregrino</h5>
+                <p class="card-text">Una hermosa ave que casa bien pro </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <img src="{{ url_for('static', filename='img/guacamayo.webp') }}" class="card-img-top" alt="Medusa">
+            <div class="card-body">
+                <h5 class="card-title">Guacamaya</h5>
+                <p class="card-text">Exotica ave por sus colores.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100">
+            <video class="card-img-top" controls width="100%" style="height: auto;">
+                <source src="{{ url_for('static', filename='/img/video/autos_antiguos.mp4') }}" type="video/mp4">
+                  Tu navegador no soporta la etiqueta de video.
+            </video>
+
+            <div class="card-body">
+                <h5 class="card-title">Los autos más antiguos</h5>
+                <p class="card-text">Las mejores maquinas antiguas.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

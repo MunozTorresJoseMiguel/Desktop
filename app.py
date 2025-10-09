@@ -18,6 +18,13 @@ def vehiculos():
 def maravillas():
     return render_template('maravillas.html')
 
+@app.route("/auto")
+def carro():
+    return '''
+<h1>hola</h1>
+<video src="static/img/video/autos_antiguos.mp4"></video>
+'''
+
 @app.route('/acerca')
 def acerca():
     return render_template('acerca.html')
