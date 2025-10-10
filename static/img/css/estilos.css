@@ -1,0 +1,27 @@
+body {
+    background-color: #0d0d0d;
+    background-image: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.05), transparent 20%),
+                      radial-gradient(circle at 80% 80%, rgba(255,255,255,0.05), transparent 20%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #f0f0f0;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #ffcc00;
+}
+
+body {
+    background: linear-gradient(to bottom right, #1f1c2c, #928dab);
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+img {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+a {
+    color: #ffcc00;
+    text-decoration: none;
+}
