@@ -23,6 +23,7 @@ def maravillas():
 
 @app.route('/sesion')
 def sesion():
+    
     return render_template('sesion.html')
 
 @app.route('/auto')
@@ -48,7 +49,7 @@ def facebook():
             return render_template('facebook.html', nombre=nombre, apellido=apellido, email=email)
 
         flash(f'Cuenta creada para {nombre} {apellido} con el email {email}!', 'success')
-        return redirect(url_for('facebook'))
+        return redirect(url_for('index'))
 
     return render_template('facebook.html')
 
