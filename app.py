@@ -1,9 +1,9 @@
-# ...existing code...
+
 import os
 from flask import Flask, render_template, url_for, redirect, request, flash
 
 app = Flask(__name__)
-app.secret_key = os.environ.get('FLASK_SECRET', 'dev-secreto-cambiar')  # necesario para flash
+app.secret_key = os.environ.get('FLASK_SECRET', 'dev-secreto-cambiar')  
 
 @app.route('/')
 def index():
@@ -35,13 +35,14 @@ def carro():
 @app.route('/facebook', methods=['GET', 'POST'])
 def facebook():
     if request.method == 'POST':
-        # aceptar varios nombres comunes de campo (ajusta según tu plantilla)
-        nombre = request.form.get('nombre') or request.form.get('firstName') or ''
-        apellido = request.form.get('apellido') or request.form.get('lastName') or ''
-        email = request.form.get('email') or request.form.get('emailAddress') or ''
-        contrasena = request.form.get('contrasena') or request.form.get('password') or ''
+        
+        nombre = request.form["firstName"]
+        apellido = request.form["lastName"]
+        email = request.form["email"]
+        contrasena = request.form["password"]
+        Confir_password = request.form["Confirmar Cotraseña"]
 
-        # validación simple
+        
         if not contrasena or len(contrasena) < 6:
             flash('La contraseña debe tener al menos 6 caracteres.', 'danger')
             return render_template('facebook.html', nombre=nombre, apellido=apellido, email=email)
@@ -57,4 +58,3 @@ def acerca():
 
 if __name__ == '__main__':
     app.run(debug=True)
-# ...existing code...
