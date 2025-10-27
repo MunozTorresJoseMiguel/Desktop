@@ -1,9 +1,13 @@
-
-import os
 from flask import Flask, render_template, url_for, redirect, request, flash
-
 app = Flask(__name__)
-app.secret_key = os.environ.get('FLASK_SECRET', 'dev-secreto-cambiar')  
+app.config['SECRET_KEY']="Jose_Miguel7" 
+USUARIOS_REGISTRADOS ={
+    'admin@gmai.com':{
+        'password': 'admin123',
+        'nombre':'Admistrador',
+        'fecha_nacimineto':'2008-04-06'
+    }    
+}
 
 @app.route('/')
 def index():
@@ -23,15 +27,16 @@ def maravillas():
 
 @app.route('/sesion')
 def sesion():
-    
-    return render_template('sesion.html')
+    if session.get("logueado") == True:
+        session.clear() 
+        return render_template('index.html')
 
-@app.route('/auto')
-def carro():
-    return '''
-<h1>hola</h1>
-<video src="static/img/video/autos_antiguos.mp4"></video>
-'''
+    return render_template("sesion.html")
+
+@app.route("/validalogin",methods=['GET','POST'])
+def validalogin():
+    if request.method =='POST':
+        email = request.form.get('email','').strip()
 
 @app.route('/facebook', methods=['GET', 'POST'])
 def facebook():
