@@ -19,8 +19,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('facebook') }}">Crea cuenta </a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('sesion') }}">Inicia sesion</a></li>
+
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('animales') }}">Animales Exóticos</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('vehiculos') }}">Vehículos Antiguos</a>
@@ -28,6 +27,24 @@
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('maravillas') }}">Maravillas del Mundo</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('acerca') }}">Acerca de...</a></li>
+                </ul>
+
+                <ul class="navbar-nav ms-auto">
+                    {% if session.get('logueado') %}
+                    <li class="nav-item">
+                        <span class="nav-link">Bienvenido, {{ session.get('usuario_nombre') }}</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('sesion') }}">Cerrar Sesión</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('sesion') }}">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('facebook') }}">Registro</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
